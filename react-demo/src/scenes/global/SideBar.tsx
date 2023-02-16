@@ -1,7 +1,6 @@
-import { useState, ReactNode } from 'react'
+import { useState } from 'react'
 import { Sidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar'
-import { Typography, useTheme } from '@mui/material'
-
+import { Avatar, Box, Typography, useTheme } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { colors } from './../../theme'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
@@ -16,6 +15,7 @@ import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
+import { alignProperty } from '@mui/material/styles/cssUtils'
 
 function SideBar(): JSX.Element {
   const theme = useTheme()
@@ -27,7 +27,9 @@ function SideBar(): JSX.Element {
     <Sidebar
       backgroundColor={colors.primary[600]}
       breakPoint='xs'
-      rootStyles={{ border: 'none' }}
+      rootStyles={{
+        border: 'none'
+      }}
     >
       <Menu
         menuItemStyles={{
@@ -36,10 +38,10 @@ function SideBar(): JSX.Element {
             if (level === 0)
               return {
                 backgroundColor: active ? '#eecef9' : undefined,
-               "&:hover": {
-                     backgroundColor: `${colors.primary[400]}`,
-                   }, 
-            }
+                '&:hover': {
+                  backgroundColor: `${colors.primary[400]}`
+                }
+              }
           }
         }}
       >
@@ -52,6 +54,22 @@ function SideBar(): JSX.Element {
             collapseSidebar()
           }}
         ></MenuItem>
+        <Box
+          textAlign='center'
+          display='flex'
+          justifyContent='center'
+          alignContent='center'
+          pt='10px'
+        >
+          <Avatar
+            alt='Sarah Dockter'
+            sx={{
+              width: 56,
+              height: 56
+            }}
+            src='http://placekitten.com/100/100'
+          />
+        </Box>
         {/* Items */}
         {/* Dashboard */}
         <MenuItem
