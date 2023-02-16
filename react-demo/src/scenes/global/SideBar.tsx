@@ -1,8 +1,8 @@
 import { useState, ReactNode } from 'react'
 import { Sidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar'
-import { Box, IconButton, Typography, useTheme } from '@mui/material'
+import { Typography, useTheme } from '@mui/material'
 
-import { Link, Path } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { colors } from './../../theme'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined'
@@ -29,7 +29,20 @@ function SideBar(): JSX.Element {
       breakPoint='xs'
       rootStyles={{ border: 'none' }}
     >
-      <Menu>
+      <Menu
+        menuItemStyles={{
+          button: ({ level, active, disabled }) => {
+            // only apply styles on first level elements of the tree
+            if (level === 0)
+              return {
+                backgroundColor: active ? '#eecef9' : undefined,
+               "&:hover": {
+                     backgroundColor: `${colors.primary[400]}`,
+                   }, 
+            }
+          }
+        }}
+      >
         <MenuItem
           icon={<MenuOutlinedIcon />}
           rootStyles={{
@@ -40,7 +53,7 @@ function SideBar(): JSX.Element {
           }}
         ></MenuItem>
         {/* Items */}
-        {/* Dashboard */}={' '}
+        {/* Dashboard */}
         <MenuItem
           component={<Link to='/' />}
           style={{
