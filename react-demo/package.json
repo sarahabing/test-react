@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint -c .eslintrc.cjs --no-eslintrc --ext js,jsx,ts,tsx src",
+    "eslint": "eslint -c .eslintrc.cjs --no-eslintrc --ext js,jsx,ts,tsx src",
     "stylelint": "stylelint 'src/**/*.css' 'src/**/**/*.css' 'public/assets/**/*.css'",
     "checks": "npm run lint && npm run stylelint"
   },
