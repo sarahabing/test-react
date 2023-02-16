@@ -1,4 +1,4 @@
-import { Box, InputAdornment, IconButton, useTheme } from '@mui/material'
+import { Box, IconButton, useTheme } from '@mui/material'
 import { colors } from './../../theme'
 import InputBase from '@mui/material/InputBase'
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined'
