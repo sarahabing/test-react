@@ -24,148 +24,132 @@ function SideBar(): JSX.Element {
   const { collapseSidebar } = useProSidebar()
 
   return (
-    <Sidebar backgroundColor={colors.primary[600]} breakPoint='xs' rootStyles={{border:'none'}}>
+    <Sidebar
+      backgroundColor={colors.primary[600]}
+      breakPoint='xs'
+      rootStyles={{ border: 'none' }}
+    >
       <Menu>
         <MenuItem
           icon={<MenuOutlinedIcon />}
+          rootStyles={{
+            '&:hover': 'red'
+          }}
           onClick={() => {
             collapseSidebar()
           }}
         ></MenuItem>
-
         {/* Items */}
-
-        {/* Dashboard */}
-        <Link to='/'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<HomeOutlinedIcon />}
-          >
-            <Typography>Dashboard</Typography>
-          </MenuItem>
-        </Link>
-
+        {/* Dashboard */}={' '}
+        <MenuItem
+          component={<Link to='/' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<HomeOutlinedIcon />}
+        >
+          <Typography>Dashboard</Typography>
+        </MenuItem>
         {/* Manage Team */}
-        <Link to='/team'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<PeopleOutlinedIcon />}
-          >
-            <Typography>Manage Team</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/team' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<PeopleOutlinedIcon />}
+        >
+          <Typography>Manage Team</Typography>
+        </MenuItem>
         {/* Contacts */}
-        <Link to='/contacts'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<ContactsOutlinedIcon />}
-          >
-            <Typography>Contacts</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/contacts' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<ContactsOutlinedIcon />}
+        >
+          <Typography>Contacts</Typography>
+        </MenuItem>
         {/* Invoices */}
-        <Link to='/invoices'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<ReceiptOutlinedIcon />}
-          >
-            <Typography>Invoices</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/invoices' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<ReceiptOutlinedIcon />}
+        >
+          <Typography>Invoices</Typography>
+        </MenuItem>
         {/* Profile */}
-        <Link to='/profile'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<PersonOutlinedIcon />}
-          >
-            <Typography>Profile</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/profile' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<PersonOutlinedIcon />}
+        >
+          <Typography>Profile</Typography>
+        </MenuItem>
         {/* Calendar */}
-        <Link to='/calendar'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<CalendarTodayOutlinedIcon />}
-          >
-            <Typography>Calendar</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/calendar' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<CalendarTodayOutlinedIcon />}
+        >
+          <Typography>Calendar</Typography>
+        </MenuItem>
         {/* Bar */}
-        <Link to='/bar'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<BarChartOutlinedIcon />}
-          >
-            <Typography>Bar Chart</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/bar' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<BarChartOutlinedIcon />}
+        >
+          <Typography>Bar Chart</Typography>
+        </MenuItem>
         {/* Pie */}
-        <Link to='/pie'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<PieChartOutlineOutlinedIcon />}
-          >
-            <Typography>Pie Chart</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/pie' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<PieChartOutlineOutlinedIcon />}
+        >
+          <Typography>Pie Chart</Typography>
+        </MenuItem>
         {/* Timeline */}
-        <Link to='/line'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<TimelineOutlinedIcon />}
-          >
-            <Typography>Line Chart</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/line' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<TimelineOutlinedIcon />}
+        >
+          <Typography>Line Chart</Typography>
+        </MenuItem>
         {/* Geography */}
-        <Link to='/geography'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<MapOutlinedIcon />}
-          >
-            <Typography>Geography</Typography>
-          </MenuItem>
-        </Link>
-
+        <MenuItem
+          component={<Link to='/geography' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<MapOutlinedIcon />}
+        >
+          <Typography>Geography</Typography>
+        </MenuItem>
         {/* FAQ */}
-        <Link to='/faq'>
-          <MenuItem
-            style={{
-              color: colors.grey[100]
-            }}
-            icon={<HelpOutlineOutlinedIcon />}
-          >
-            <Typography>FAQ</Typography>
-          </MenuItem>
-        </Link>
+        <MenuItem
+          component={<Link to='/faq' />}
+          style={{
+            color: colors.grey[100]
+          }}
+          icon={<HelpOutlineOutlinedIcon />}
+        >
+          <Typography>FAQ</Typography>
+        </MenuItem>
       </Menu>
     </Sidebar>
   )
