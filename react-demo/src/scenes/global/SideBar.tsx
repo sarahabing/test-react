@@ -1,5 +1,5 @@
-import React from 'react'
-
-const SideBar = () => <div>Sidebar</div>
+function SideBar(): JSX.Element {
+  return <div>Sidebar</div>
+}
 
 export default SideBar
