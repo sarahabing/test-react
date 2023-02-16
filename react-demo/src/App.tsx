@@ -2,7 +2,6 @@ import { theme } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import {Routes, Route} from 'react-router-dom';
 import { ProSidebarProvider } from 'react-pro-sidebar'
-
 import TopBar from './scenes/global/TopBar';
 import SideBar from './scenes/global/SideBar';
 import Dashboard from './scenes/dashboard'
