@@ -4,7 +4,6 @@ import { formatDate } from '@fullcalendar/core'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import listPlugin from '@fullcalendar/list'
 import {
   Box,
   List,
@@ -101,13 +100,12 @@ function Calendar(): JSX.Element {
             plugins={[
               dayGridPlugin,
               timeGridPlugin,
-              interactionPlugin,
-              listPlugin
+              interactionPlugin
             ]}
             headerToolbar={{
               left: 'prev,next today',
               center: 'title',
-              right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
             initialView='dayGridMonth'
             editable={true}
