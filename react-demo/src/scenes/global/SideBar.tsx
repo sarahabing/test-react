@@ -16,6 +16,7 @@ import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
 import { alignProperty } from '@mui/material/styles/cssUtils'
+import { height } from '@mui/system'
 
 function SideBar(): JSX.Element {
   const theme = useTheme()
@@ -28,7 +29,8 @@ function SideBar(): JSX.Element {
       backgroundColor={colors.primary[600]}
       breakPoint='xs'
       rootStyles={{
-        border: 'none'
+        border: 'none',
+    
       }}
     >
       <Menu
