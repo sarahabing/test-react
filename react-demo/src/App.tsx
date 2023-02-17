@@ -15,6 +15,7 @@ import Pie from './scenes/pie';
 import FAQ from './scenes/faq';
 import Geography from './scenes/geography';
 import Calendar from './scenes/calendar';
+import BottomBar from './scenes/global/BottomBar';
 
 
 function App (): JSX.Element {
@@ -27,22 +28,27 @@ function App (): JSX.Element {
           <SideBar />
 
           <main className='content'>
-            <TopBar />
+            <header>
+              <TopBar />
+            </header>
             <Routes>
               <Route path='/' element={<Dashboard />} />
               <Route path='/team' element={<Team />} />
-            <Route path='/contacts' element={<Contacts />} />
-            <Route path='/invoices' element={<Invoices />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/bar' element={<Bar />} />
-            <Route path='/pie' element={<Pie />} />
-            <Route path='/line' element={<Line />} />
-            <Route path='/geography' element={<Geography />} />
-            <Route path='/faq' element={<FAQ />} />
-            <Route path='/calendar' element={<Calendar />} /> 
+              <Route path='/contacts' element={<Contacts />} />
+              <Route path='/invoices' element={<Invoices />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/bar' element={<Bar />} />
+              <Route path='/pie' element={<Pie />} />
+              <Route path='/line' element={<Line />} />
+              <Route path='/geography' element={<Geography />} />
+              <Route path='/faq' element={<FAQ />} />
+              <Route path='/calendar' element={<Calendar />} />
             </Routes>
           </main>
         </div>
+        <footer>
+          <BottomBar />
+        </footer>
       </ProSidebarProvider>
     </ThemeProvider>
   )

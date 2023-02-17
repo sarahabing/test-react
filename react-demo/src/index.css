@@ -10,6 +10,12 @@ body,
   font-family: "Source Sans Pro", sans-serif;
 }
 
+html, body {
+  display: 'flex';
+  flex-direction: 'column';
+}
+
+
 .app {
   position: relative;
   display: flex;

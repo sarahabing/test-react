@@ -30,7 +30,7 @@ function SideBar(): JSX.Element {
       breakPoint='xs'
       rootStyles={{
         border: 'none',
-        height: '100vw'
+    
       }}
     >
       <Menu
