@@ -1,7 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react'
-import { Header } from '../../components/Header'
+import {Header}  from '../../components/Header'
 import { mockDataInvoices } from '../../data/mockData'
 import { colors } from '../../theme'
 
